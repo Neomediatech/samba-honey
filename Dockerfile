@@ -9,7 +9,7 @@ LABEL maintainer="docker-dario@neomediatech.it" \
       org.label-schema.vcs-url=https://github.com/Neomediatech/${SERVICE} \
       org.label-schema.maintainer=Neomediatech
 
-RUN apt update && apt-get -y dist-upgrade && \
+RUN apt-get update && apt-get -y dist-upgrade && \
     apt-get install -y --no-install-recommends samba samba-vfs-modules && \
     rm -rf /var/lib/apt/lists* && \
     mkdir -p /shares

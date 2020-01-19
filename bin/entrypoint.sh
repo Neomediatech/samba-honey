@@ -7,5 +7,7 @@ if [ ! -f $LOGFILE ]; then
 	chmod 666 $LOGFILE
 fi
 
+mkdir -p /shares/marketing /shares/admin
+
 exec tail -f $LOGFILE &
 exec "$@"

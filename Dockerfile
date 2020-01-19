@@ -22,6 +22,6 @@ RUN chmod a+x /entrypoint.sh
 VOLUME [ "/shares" ]
 
 ENTRYPOINT [ "/tini", "--", "/entrypoint.sh" ]
-CMD [ "smbd", "-F", "-d", "1" ]
+CMD [ "smbd", "-F" ]
 
 HEALTHCHECK --interval=30s --timeout=5s --retries=20 CMD smbcontrol smbd ping
